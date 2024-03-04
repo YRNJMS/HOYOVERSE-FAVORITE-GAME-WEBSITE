@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="icon" type="image/x-icon" href="assets/LOGO/Hoyo-emblem.svg">
+    <title>HUYUBERS | HOME</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Paytone+One&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+html {
+    -webkit-user-select: none;
+}
+@font-face {
+    font-family: zh-cn;
+    src: url( assets/Genshin-Impact-Font/zh-cn.ttf);
+}
+body {
+    min-height: 100vh;
+    /* overflow: hidden; */
+    /* background-color: #464D5B; */
+    /* background-color:#F8F6F2; */
+    background-color: #464D5B;
+    background-image: url(assets/img/GENSHIN.gif);
+    background-size: 100%;
+    backdrop-filter: blur(10px);
+}
+header {
+    position: fixed;
+    top: 0;
+    Padding-left: 140px;
+    width: 100%;
+    padding: 8px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: 0.4s;
+    background: hsla(40, 30%, 96%, 0.5);
+    backdrop-filter: blur(10px);
+}
+.nav h3 {
+    text-decoration: none;
+}
+.logo{
+    margin-right: 20px;
+    /* margin-left: 200px; */
+}
+.nav a {
+    text-decoration: none;
+    color: #464D5B;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin: 0 10px;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px  rgba(0, 0, 0, 0.2);
+}
+.nav a:hover {
+    /* background: linear-gradient(to right, var(--lime) , var(--blue), var(--red));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text; */
+    color: white;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.containerheader {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 70px;
+    width: 350px;
+    background-color: #2f333b;
+    color: #F8F6F2;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+    padding: 10px;
+    backdrop-filter: blur(10px);
+    padding-top: 30px;
+    box-shadow: #464D5B 2px 2px 20px;
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 70px;
+    width: 350px;
+    height: 610px;
+    background-color: #F8F6F2;
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+    padding: 10px;
+    backdrop-filter: blur(10px);
+    margin-bottom: 100px;
+    box-shadow: #464D5B 2px 2px 20px;
+
+}
+.container h4 {
+    text-align: left;
+    font-family: zh-cn;
+    font-weight: 100;
+    color: #2f333b;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+input[type="radio"] {
+    display: none;
+}
+input[type="radio"]:checked + label{
+    background-color: hsl(40, 100%, 80%);
+    filter: grayscale(0);
+}
+.radioBtnContent {
+    margin-left: 25px;
+    text-align: left;
+    margin-bottom: 15px; /* Add some spacing between radio button groups */
+    justify-content: center;
+    /* text-align: center; */
+}
+
+.radioBtnContent label {
+    padding: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px; 
+    transition: .2s  ease-in-out;
+    filter: grayscale(0.7);
+    border: 2px solid #464D5B; 
+    border-radius: 5px;
+    width: 250px;
+}
+.radioBtnContent label:hover {
+    background-color: hsl(40, 100%, 80%);
+    padding: 5px 5px;
+    backdrop-filter: blur(10px);
+    color: #2f333b;
+    border-radius: 4px;
+    scale: 1.1;
+    filter: grayscale(0);
+    box-shadow: #ffeecd 2px 2px 30px;
+}
+.radioBtnContent label:active {
+    transition: all 0.05s ease;
+    transform: scale(.9);    
+}
+.radiobutton .RdBtnImg {
+    width: 25px;
+    margin-right: 5px; 
+}
+
+.radiobutton .ChckBoxBtnImg {
+    width: 25px;
+    margin-right: 5px; 
+}
+.divider img {
+ width: 100%;
+ padding-bottom: 10px;
+ padding-top: 15px;
+ filter: grayscale(1);
+ filter: opacity(0.5);
+ scale: 1.5;
+}
+.checkboxContent {
+    text-align: left;
+    text-transform: uppercase;
+    margin-left: 25px;
+    padding-bottom: 10px;
+    vertical-align: middle;
+}
+.checkboxContent label{
+    transition: .2s  ease-in-out;
+}
+.checkboxContent:hover label {
+    background-color: hsl(40, 100%, 80%);
+    padding: 5px 5px;
+    backdrop-filter: blur(10px);
+    color: #2f333b;
+    border-radius: 4px;
+    scale: 1.1;
+    filter: grayscale(0);
+    box-shadow: #ffeecd 2px 2px 30px;
+}
+
+.btn {
+    background-color: transparent;
+    border-radius: 10px;
+    border: solid #2f333b 0.5px ;
+    padding: 5px 10vh;
+    margin-top: 10px;
+    transition: .2s  ease-in-out;
+    width: 250px;
+    
+}
+.btn:hover {
+    background-color: #ffeecd;
+    backdrop-filter: blur(10px);
+    color: #0e0f12;
+    border-radius: 4px;
+    scale: 1.1;
+    filter: grayscale(0);
+}
+#btn:active {
+    transition: all 0.3s ease;
+    transform: scale(.8);
+}
+#clrBtn:active {
+  transition: all 0.3s ease;
+    transform: scale(.8);
+}
+.FooterContainer {
+    position: relative;
+    background: #111;
+    height: auto;
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 30px;
+    color: #fff;
+}
+.FooterContainer img {
+    padding-bottom: 30px;
+    display: grid;
+    place-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+}
+
+.copyright {
+    background: #000000;
+    text-align: center;
+    padding: 10px;
+    
+}
+.copyright p {
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+    color: #fff;
+    
+}
+.copyright span {
+    opacity: .4;
+    font-weight: 200;
+}
+    </style>
+</head>
+<body>
+    <header id="nav">
+      <a href="https://www.hoyoverse.com/en-us/"> 
+        <img src="assets/LOGO/HoYoverse_Colour_Ring_Wordmark_White.png" class="logo" width="125px">
+      </a> 
+        <nav class="nav">
+            <a href="#index.html">HOME</a>
+            <a href="https://www.hoyoverse.com/en-us/">ABOUT</a>
+            <a href="https://www.hoyolab.com/article/12298231">REFERENCES</a>
+        </nav>
+        </ul>
+    </header>
+    <section class="containerheader">
+      <h4>
+      WHAT'S YOUR FAVORITE? <br><br>
+      </h4>
+    </section>
+    <section class="container">
+        <h4>
+          HOYOVERSE GAME: <br><br>
+        </h4>
+        <div class="radiobutton">
+        <div class="radioBtnContent">
+            <input type="radio" name="HoyoGames" value="GENSHIN IMPACT" id="GENSHIN">
+            <label for="GENSHIN"><img class="RdBtnImg" src="assets/LOGO/GENSHIN.webp">
+              GENSHIN IMPACT 
+            </label>
+        </div>
+        <div  class="radioBtnContent">
+            <input type="radio" name="HoyoGames" value="HONKAI IMPACT 3RD" id="Hi3">
+            <label for="Hi3"><img class="RdBtnImg" src="assets/LOGO/Hi3.jpg">
+              HONKAI IMPACT 3RD
+            </label>
+        </div>
+        <div  class="radioBtnContent">
+            <input type="radio" name="HoyoGames" value="HONKAI: STAR RAIL" id="HSR">
+            <label for="HSR"><img class="RdBtnImg" src="assets/LOGO/HSR.jpg">
+            HONKAI: STAR RAIL
+            </label>
+        </div>
+        <div  class="radioBtnContent">
+            <input type="radio" name="HoyoGames" value="ZENLESS ZONE ZERO" id="zzz">
+            <label for="zzz"><img class="RdBtnImg" src="assets/LOGO/ZZZ.jpg ">
+              ZENLESS ZONE ZERO
+            </label>
+        </div>
+        <div class="divider">
+          <img src="assets/img/divider2.png">
+        </div>
+        <h4>CHOOSE YOUR REWARD (ANY):</h4>
+        <div class="checkboxContent">
+          <label for="c1"><input type="checkbox" name="rewards" value="Ingame Currency"id="c1"> <img class="ChckBoxBtnImg" src="assets/img/Currency.png"> Ingame Currency <br> </label>
+        </div>
+        <div class="checkboxContent">
+          <label for="c2"><input type="checkbox" name="rewards" value="Monthly Pass" id="c2"> <img class="ChckBoxBtnImg" src="assets/img/monthlyPass.png"> Monthly Pass <br></label>
+        </div>
+        <div class="checkboxContent">
+          <label for="c3"><input type="checkbox" name="rewards" value="In-game Energy"id="c3"> <img class="ChckBoxBtnImg" src="assets/img/energy.png"> In-game energy </label>
+        </div>
+        </div>
+        <div class="btns">
+            <div class="submitBt">
+              <p>
+                <button class="btn" id="btn">SUBMIT</button>
+              </p>
+          </div>
+          <div class="btns">
+              <p>
+                 <button class="btn" id="clrBtn">CLEAR</button>
+              </p>
+          </div>
+        </div>
+    </section>
+<!-- FOOTER SECTION -->
+    <footer>
+      <div class="FooterContainer">
+          <a href="https://www.itsmorefuninthephilippines.com/"> 
+              <img src="assets/LOGO/hoyoverse-white-logo-transparent-7.png" class="FooterLogo">
+          </a> 
+         
+      </div>
+      <div class="copyright">
+          <p>copyright &copy;2024 HOYOVERSE. Designed by <span>TURON</span></p>
+      </div>
+  </footer>
+<script>
+   window.onload = function()
+    {
+       document.body.style.zoom = "63.4%"; 
+    };
+    const btn = document.getElementById('btn');
+    const clrBtn = document.querySelector('#clrBtn');
+    const radioButtons = document.querySelectorAll('input[name="HoyoGames"]');
+btn.addEventListener("click", () => {
+  let prompt = "";
+  let selectedGame;
+  {
+    for (const radioButton of radioButtons) 
+    {
+      if (radioButton.checked) {
+        selectedGame = radioButton.value;
+        break;
+      }
+    }
+    prompt += "Your Favorite Game: " + (selectedGame ? `${selectedGame}` : "Not Selected") + "\n";
+  }
+  {
+    let checkboxes = document.querySelectorAll('input[name="rewards"]:checked');
+    let values = [];
+    checkboxes.forEach((checkbox) => {
+      values.push(checkbox.value);
+    });
+
+    prompt += "Congrats! this are the rewards(s) you'll get and will be sent to your account: ";
+
+    for (const value of values) {
+      prompt += (" " + value);
+      if (value !== values[values.length - 1]) {
+        prompt += ",";
+      }
+    }
+  }
+  alert(prompt);
+});
+clrBtn.addEventListener('click', function() {
+            const radioButtons = document.querySelectorAll('input[name="HoyoGames"]');
+            radioButtons.forEach(button => button.checked = false);
+
+            const checkboxes = document.querySelectorAll('input[name="rewards"]:checked');
+            checkboxes.forEach(checkbox => checkbox.checked = false);
+});
+</script>
+</section>
+</body>
+</html>
